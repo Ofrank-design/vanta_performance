@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programs | Vanta Performance</title>
+<meta name="description" content="Four performance programs, each built around a different demand: schedule, competition, longevity, or a fully private protocol.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="index.html" class="logo">Vanta</a>
+    <div class="nav-links">
+      <a href="index.html">Performance</a>
+      <a href="method.html">Method</a>
+      <a href="programs.html" class="active">Programs</a>
+      <a href="assessment.html">Intelligence</a>
+      <a href="journal.html">Journal</a>
+      <a href="about.html">About</a>
+    </div>
+    <a href="apply.html" class="btn btn-outline btn-sm">Apply</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-close"><button id="drawerClose" aria-label="Close menu">×</button></div>
+  <div class="nav-links">
+    <a href="index.html">Performance</a><a href="method.html">Method</a><a href="programs.html">Programs</a>
+    <a href="assessment.html">Intelligence</a><a href="journal.html">Journal</a><a href="about.html">About</a>
+  </div>
+  <a href="apply.html" class="btn btn-outline btn-block">Apply</a>
+</div>
+
+<main>
+
+  <section class="page-hero">
+    <div class="frame" data-img="lifestyle.travel" data-decorative></div>
+    <div class="wrap page-hero-content">
+      <div class="breadcrumb"><a href="index.html">Performance</a> / Programs</div>
+      <h1>Programs built around your situation.</h1>
+      <p>Each program is built for a different situation: a packed schedule, a competitive goal, a long horizon, or a plan that is entirely your own.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid-2-gap" id="allPrograms"></div>
+    </div>
+  </section>
+
+  <section class="section on-light">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Choosing a Program</span>
+        <h2>Let the assessment suggest a starting point.</h2>
+      </div>
+      <div style="display:flex; justify-content:center;">
+        <a href="assessment.html" class="btn btn-dark">Begin the Assessment</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><a href="index.html" class="footer-logo">Vanta Performance</a><p>Private performance coaching for people who expect more from themselves.</p></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="method.html">Method</a></li><li><a href="programs.html">Programs</a></li><li><a href="assessment.html">Intelligence</a></li></ul></div>
+      <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="journal.html">Journal</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Begin</h4><ul><li><a href="apply.html">Apply</a></li><li><a href="membership.html">Membership</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Vanta Performance. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<script src="js/imageRegistry.js"></script>
+<script src="js/data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/main.js"></script>
+<script>
+  renderPrograms('allPrograms');
+</script>
+</body>
+</html>

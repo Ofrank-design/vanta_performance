@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply for Private Coaching | Vanta Performance</title>
+<meta name="description" content="Apply for private performance coaching at Vanta. Every application is reviewed personally before a private consultation is scheduled.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="index.html" class="logo">Vanta</a>
+    <div class="nav-links">
+      <a href="index.html">Performance</a>
+      <a href="method.html">Method</a>
+      <a href="programs.html">Programs</a>
+      <a href="assessment.html">Intelligence</a>
+      <a href="journal.html">Journal</a>
+      <a href="about.html">About</a>
+    </div>
+    <a href="apply.html" class="btn btn-outline btn-sm">Apply</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-close"><button id="drawerClose" aria-label="Close menu">×</button></div>
+  <div class="nav-links">
+    <a href="index.html">Performance</a><a href="method.html">Method</a><a href="programs.html">Programs</a>
+    <a href="assessment.html">Intelligence</a><a href="journal.html">Journal</a><a href="about.html">About</a>
+  </div>
+  <a href="apply.html" class="btn btn-outline btn-block">Apply</a>
+</div>
+
+<main>
+
+  <section class="section" style="padding-top:170px;">
+    <div class="wrap">
+      <div class="section-head center" style="margin-bottom:50px;">
+        <span class="eyebrow" style="justify-content:center;">Application</span>
+        <h1 style="font-size:clamp(30px,3.8vw,46px);">Apply for Private Coaching</h1>
+        <p>Every application is reviewed personally. There is no payment at this stage. This is the start of a conversation.</p>
+      </div>
+
+      <div class="assessment-box" id="applyForm">
+        <div class="assessment-progress" id="applyProgress"></div>
+
+        <div class="assessment-step" data-step="about">
+          <span class="step-label">Step 01 &middot; About You</span>
+          <h3>Tell us a little about yourself.</h3>
+          <div class="form-grid" style="margin-top:28px;">
+            <div class="form-group"><label>First Name</label><input type="text" data-required></div>
+            <div class="form-group"><label>Last Name</label><input type="text" data-required></div>
+            <div class="form-group full"><label>Occupation</label><input type="text" data-required></div>
+          </div>
+        </div>
+
+        <div class="assessment-step" data-step="goals">
+          <span class="step-label">Step 02 &middot; Your Goals</span>
+          <h3>What are you hoping to achieve?</h3>
+          <div class="option-grid">
+            <button type="button" class="option-card" data-required>Sustained performance under a demanding schedule</button>
+            <button type="button" class="option-card">Measurable strength and power gains</button>
+            <button type="button" class="option-card">Long term health and longevity</button>
+            <button type="button" class="option-card">A fully private, customized protocol</button>
+          </div>
+        </div>
+
+        <div class="assessment-step" data-step="routine">
+          <span class="step-label">Step 03 &middot; Current Routine</span>
+          <h3>Describe your current training routine.</h3>
+          <div class="form-group full" style="margin-top:20px;">
+            <textarea data-required placeholder="What does a typical training week look like for you right now, if anything?"></textarea>
+          </div>
+        </div>
+
+        <div class="assessment-step" data-step="schedule">
+          <span class="step-label">Step 04 &middot; Your Schedule</span>
+          <h3>How demanding is your schedule?</h3>
+          <div class="option-grid">
+            <button type="button" class="option-card" data-required>Flexible, I can plan around training</button>
+            <button type="button" class="option-card">Busy, but generally predictable</button>
+            <button type="button" class="option-card">Demanding and frequently unpredictable</button>
+            <button type="button" class="option-card">Heavy travel most weeks</button>
+          </div>
+        </div>
+
+        <div class="assessment-step" data-step="expectations">
+          <span class="step-label">Step 05 &middot; Your Expectations</span>
+          <h3>What would make this a success for you?</h3>
+          <div class="form-group full" style="margin-top:20px;">
+            <textarea data-required placeholder="In six months, what would tell you this was worth it?"></textarea>
+          </div>
+        </div>
+
+        <div class="assessment-step" data-step="format">
+          <span class="step-label">Step 06 &middot; Coaching Format</span>
+          <h3>Preferred coaching format.</h3>
+          <div class="option-grid">
+            <button type="button" class="option-card" data-required>At the studio in Los Angeles</button>
+            <button type="button" class="option-card">Remote coaching</button>
+            <button type="button" class="option-card">A mix of both</button>
+            <button type="button" class="option-card">Not sure yet</button>
+          </div>
+        </div>
+
+        <div class="assessment-step" data-step="contact">
+          <span class="step-label">Step 07 &middot; Contact Details</span>
+          <h3>Where can we reach you?</h3>
+          <div class="form-grid" style="margin-top:20px;">
+            <div class="form-group"><label>Email</label><input type="email" data-required></div>
+            <div class="form-group"><label>Phone</label><input type="tel" data-required></div>
+          </div>
+        </div>
+
+        <div class="assessment-step" data-step="submit">
+          <span class="step-label">Step 08 &middot; Review and Submit</span>
+          <h3>Ready to submit your application.</h3>
+          <p style="margin-top:18px; font-size:15px;">Once submitted, our team will review your application personally and follow up within two business days to schedule your private consultation.</p>
+        </div>
+
+        <div class="assessment-nav">
+          <button type="button" class="btn btn-outline" id="applyBack">Back</button>
+          <button type="button" class="btn btn-primary" id="applyNext">Continue</button>
+        </div>
+      </div>
+
+      <div class="success-panel" id="applySuccess" style="display:none;">
+        <div class="success-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>Application received.</h3>
+        <p>Thank you for applying. Our team reviews every application personally and will follow up within two business days to schedule your private consultation.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><a href="index.html" class="footer-logo">Vanta Performance</a><p>Private performance coaching for people who expect more from themselves.</p></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="method.html">Method</a></li><li><a href="programs.html">Programs</a></li><li><a href="assessment.html">Intelligence</a></li></ul></div>
+      <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="journal.html">Journal</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Begin</h4><ul><li><a href="apply.html">Apply</a></li><li><a href="membership.html">Membership</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Vanta Performance. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<script src="js/imageRegistry.js"></script>
+<script src="js/data.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/main.js"></script>
+<script src="js/apply.js"></script>
+</body>
+</html>

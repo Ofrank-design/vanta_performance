@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Vanta Performance</title>
+<meta name="description" content="Get in touch with Vanta Performance. Questions before applying for private coaching are welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="index.html" class="logo">Vanta</a>
+    <div class="nav-links">
+      <a href="index.html">Performance</a>
+      <a href="method.html">Method</a>
+      <a href="programs.html">Programs</a>
+      <a href="assessment.html">Intelligence</a>
+      <a href="journal.html">Journal</a>
+      <a href="about.html">About</a>
+    </div>
+    <a href="apply.html" class="btn btn-outline btn-sm">Apply</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-close"><button id="drawerClose" aria-label="Close menu">×</button></div>
+  <div class="nav-links">
+    <a href="index.html">Performance</a><a href="method.html">Method</a><a href="programs.html">Programs</a>
+    <a href="assessment.html">Intelligence</a><a href="journal.html">Journal</a><a href="about.html">About</a>
+  </div>
+  <a href="apply.html" class="btn btn-outline btn-block">Apply</a>
+</div>
+
+<main>
+
+  <section class="page-hero" style="padding:170px 0 90px;">
+    <div class="frame" data-img="training.mobility" data-decorative></div>
+    <div class="wrap page-hero-content">
+      <div class="breadcrumb"><a href="index.html">Performance</a> / Contact</div>
+      <h1>Get in touch.</h1>
+      <p>Questions before applying are welcome. For coaching inquiries, the application is the quickest route to a private consultation.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <div class="reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 style="font-size:26px; margin-bottom:30px;">Reach us directly.</h2>
+
+          <div style="display:flex; flex-direction:column; gap:28px; margin-bottom:40px;">
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:concierge@vantaperformance.com" style="font-size:17px; color:var(--soft-white);">concierge@vantaperformance.com</a>
+            </div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <a href="tel:+13105550192" style="font-size:17px; color:var(--soft-white);">+1 (310) 555-0192</a>
+            </div>
+            <div>
+              <div class="contact-label">Studio</div>
+              <p style="font-size:17px; color:var(--soft-white); line-height:1.5;">1 Meridian Place<br>Los Angeles, CA</p>
+            </div>
+          </div>
+
+          <div class="frame" style="aspect-ratio:4/3;" data-img="facility.consultRoom"></div>
+        </div>
+
+        <div class="reveal">
+          <div class="form-card">
+            <form id="contactForm" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="contactName">Name</label>
+                  <input type="text" id="contactName" autocomplete="name" data-required>
+                  <span class="form-error-msg">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail">Email</label>
+                  <input type="email" id="contactEmail" autocomplete="email" data-required>
+                  <span class="form-error-msg">Please enter a valid email address.</span>
+                </div>
+                <div class="form-group full">
+                  <label for="contactMessage">Message</label>
+                  <textarea id="contactMessage" data-required placeholder="How can we help?"></textarea>
+                  <span class="form-error-msg">Please enter a message.</span>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+              <p class="form-note">Demonstration form. Messages are not stored or sent.</p>
+            </form>
+            <div class="success-panel" id="contactSuccess" style="display:none;">
+              <div class="success-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <h3>Message sent.</h3>
+              <p>Thank you for reaching out. A member of our team will respond within one business day.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><a href="index.html" class="footer-logo">Vanta Performance</a><p>Private performance coaching for people who expect more from themselves.</p></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="method.html">Method</a></li><li><a href="programs.html">Programs</a></li><li><a href="assessment.html">Intelligence</a></li></ul></div>
+      <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="journal.html">Journal</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Begin</h4><ul><li><a href="apply.html">Apply</a></li><li><a href="membership.html">Membership</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Vanta Performance. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<script src="js/imageRegistry.js"></script>
+<script src="js/data.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>

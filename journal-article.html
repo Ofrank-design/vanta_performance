@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Journal | Vanta Performance</title>
+<meta name="description" content="Considered writing on training, recovery, and performance from the Vanta Performance team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="index.html" class="logo">Vanta</a>
+    <div class="nav-links">
+      <a href="index.html">Performance</a>
+      <a href="method.html">Method</a>
+      <a href="programs.html">Programs</a>
+      <a href="assessment.html">Intelligence</a>
+      <a href="journal.html" class="active">Journal</a>
+      <a href="about.html">About</a>
+    </div>
+    <a href="apply.html" class="btn btn-outline btn-sm">Apply</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-close"><button id="drawerClose" aria-label="Close menu">×</button></div>
+  <div class="nav-links">
+    <a href="index.html">Performance</a><a href="method.html">Method</a><a href="programs.html">Programs</a>
+    <a href="assessment.html">Intelligence</a><a href="journal.html">Journal</a><a href="about.html">About</a>
+  </div>
+  <a href="apply.html" class="btn btn-outline btn-block">Apply</a>
+</div>
+
+<main>
+
+  <section class="section" style="padding-top:170px;">
+    <div class="wrap" style="max-width:760px;">
+      <div class="breadcrumb"><a href="index.html">Performance</a> / <a href="journal.html">Journal</a> / <span id="breadcrumbTitle"></span></div>
+      <span class="eyebrow" id="articleCategory"></span>
+      <h1 id="articleTitle" style="font-size:clamp(28px,4vw,44px); margin-bottom:16px;"></h1>
+      <p id="articleDate" style="font-size:13px; color:var(--stone);"></p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap" style="max-width:900px;">
+      <div class="frame article-hero" id="articleFrame"></div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap" style="max-width:720px;">
+      <p id="articleExcerpt" style="font-size:19px; color:var(--soft-white); font-family:var(--font-display); line-height:1.5; margin-bottom:32px;"></p>
+      <div id="articleBody" style="font-size:17px; color:var(--soft-white); line-height:1.85;"></div>
+      <div style="margin-top:48px; padding-top:32px; border-top:1px solid var(--line);">
+        <a href="apply.html" class="btn btn-primary">Apply for Private Coaching</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section on-light">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Keep Reading</span>
+        <h2>More from the Journal.</h2>
+      </div>
+      <div class="grid-3-gap" id="relatedJournal"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><a href="index.html" class="footer-logo">Vanta Performance</a><p>Private performance coaching for people who expect more from themselves.</p></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="method.html">Method</a></li><li><a href="programs.html">Programs</a></li><li><a href="assessment.html">Intelligence</a></li></ul></div>
+      <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="journal.html">Journal</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Begin</h4><ul><li><a href="apply.html">Apply</a></li><li><a href="membership.html">Membership</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Vanta Performance. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<script src="js/imageRegistry.js"></script>
+<script src="js/data.js"></script>
+<script src="js/content.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const slug = getQueryParam('slug') || JOURNAL[0].slug;
+  const article = JOURNAL.find(a => a.slug === slug) || JOURNAL[0];
+
+  document.getElementById('pageTitle').textContent = article.title + ' | Vanta Performance';
+  document.getElementById('breadcrumbTitle').textContent = article.title;
+  document.getElementById('articleCategory').textContent = article.category;
+  document.getElementById('articleTitle').textContent = article.title;
+  document.getElementById('articleDate').textContent = article.date;
+  document.getElementById('articleExcerpt').textContent = article.excerpt;
+  document.getElementById('articleFrame').innerHTML = renderRegistryImage(article.image, { eager: true });
+  document.getElementById('articleBody').innerHTML = article.body
+    .map((para, i, all) => `<p style="margin-bottom:${i === all.length - 1 ? 0 : 20}px;">${para}</p>`)
+    .join('');
+
+  const related = JOURNAL.filter(a => a.slug !== article.slug).slice(0, 3);
+  document.getElementById('relatedJournal').innerHTML = related.map(a => journalCard(a, true)).join('');
+</script>
+</body>
+</html>
